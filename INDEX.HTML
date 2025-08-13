@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eureka! Pitching Competition – E-Cell SDGI x Tech Wave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0B6DFF; /* bright engaging blue */
+      --blue-700:#0a58d3;
+      --yellow:#FFD60A; /* energetic yellow */
+      --ink:#0b1220; /* deep ink for contrast */
+      --bg:#ffffff; /* clean white base */
+      --muted:#5b6b8a; /* soft slate */
+      --ring: 0 10px 40px rgba(11,109,255,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink)}
+    .wrap{
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;
+      padding:clamp(20px,4vw,48px);
+    }
+    .card{
+      width:min(1100px,100%);
+      background:radial-gradient(1200px 700px at 90% -10%, rgba(11,109,255,.10), transparent 60%),
+                 radial-gradient(900px 600px at -10% 110%, rgba(255,214,10,.16), transparent 60%),
+                 #fff;
+      border:1px solid rgba(11,109,255,.10);
+      border-radius:24px; padding:clamp(24px,4vw,48px); position:relative; isolation:isolate;
+      box-shadow:0 12px 40px rgba(15,23,42,.06);
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 14px; border-radius:999px; background:rgba(11,109,255,.08); color:var(--blue);
+      font-weight:600; letter-spacing:.2px; font-size:12px; text-transform:uppercase;
+    }
+    .badge svg{width:16px;height:16px}
+    h1{
+      font-family:Montserrat,Inter,system-ui,sans-serif;
+      font-size:clamp(28px,5vw,48px); line-height:1.1; margin:14px 0 12px; font-weight:800;
+      letter-spacing:.2px;
+    }
+    .sub{
+      font-family:Montserrat,Inter,system-ui,sans-serif;
+      font-size:clamp(16px,2.2vw,24px); font-weight:700; color:var(--ink);
+      margin:0 0 20px; letter-spacing:.2px;
+    }
+    .lead{color:var(--muted); max-width:62ch; margin:0 0 28px; font-size:clamp(14px,1.6vw,18px)}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:18px 0 8px}
+    .btn{
+      appearance:none; border:0; border-radius:14px; padding:14px 20px; font-weight:700;
+      font-size:15px; letter-spacing:.2px; cursor:pointer; transition:.2s ease; display:inline-flex; gap:10px; align-items:center;
+    }
+    .btn-primary{background:var(--blue); color:#fff; box-shadow:var(--ring)}
+    .btn-primary:hover{transform:translateY(-1px); background:var(--blue-700)}
+    .btn-outline{background:transparent; color:var(--blue); border:1.5px solid rgba(11,109,255,.35)}
+    .meta{
+      margin-top:16px; font-size:12px; color:#1f283b; display:flex; gap:14px; align-items:center; flex-wrap:wrap;
+    }
+    .meta .pill{padding:6px 10px; border-radius:999px; background:rgba(255,214,10,.2); color:#2b2b2b; font-weight:700}
+    .meta small{opacity:.85; font-weight:600}
+
+    /* Decorative/illustrative layer */
+    .scene{
+      position:absolute; inset:0; pointer-events:none; z-index:-1; opacity:.9;
+    }
+    .scene svg{position:absolute; filter:drop-shadow(0 6px 16px rgba(0,0,0,.10))}
+
+    /* Responsive grid */
+    .grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:clamp(24px,4vw,48px); align-items:center}
+    @media (max-width: 920px){ .grid{ grid-template-columns:1fr; } }
+
+    /* Illustration panel */
+    .art{
+      position:relative; background:linear-gradient(135deg, rgba(11,109,255,.08), rgba(255,214,10,.08));
+      border:1px dashed rgba(11,109,255,.25); border-radius:20px; min-height:260px; overflow:hidden;
+      display:grid; place-items:center; padding:18px;
+    }
+    .art .stack{position:relative; width:100%; max-width:520px; aspect-ratio:16/10}
+
+    /* Small caption row */
+    .caption{margin-top:18px; font-size:12px; color:var(--muted)}
+
+    /* Accessibility */
+    a:focus-visible, .btn:focus-visible{outline:3px solid var(--yellow); outline-offset:2px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <div class="grid">
+        <!-- Copy / CTA column -->
+        <section>
+          <span class="badge" aria-label="Event banner">
+            <!-- spark icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l2.2 4.9L19 9.2l-4.4 2 1.3 5L12 13.8 8.1 16.2l1.3-5L5 9.2l4.8-2.3L12 2z" fill="currentColor" opacity=".9"/></svg>
+            Eureka! Pitching Competition
+          </span>
+          <h1>E-Cell SDGI × Tech Wave</h1>
+          <p class="sub">Pitch your Startup &amp; Win a Chance to Compete in Zonal Rounds!</p>
+          <p class="lead">Bring your most innovative ideas to life. Present your deck, spark new connections, and showcase your vision in a minimal, futuristic, and professional arena.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="http://ecell.in/eureka" target="_blank" rel="noopener">Register Now</a>
+            <a class="btn btn-outline" href="#details" aria-describedby="reg-meta">Event Details</a>
+          </div>
+
+          <div class="meta" id="reg-meta">
+            <span class="pill">Last Date: 17th August</span>
+            <small>NEC ID: <strong>NEC2527351</strong></small>
+          </div>
+        </section>
+
+        <!-- Illustration column -->
+        <section class="art" aria-hidden="true">
+          <div class="stack">
+            <!-- Person presenting a pitch deck -->
+            <svg viewBox="0 0 520 325" xmlns="http://www.w3.org/2000/svg" style="position:absolute; inset:0; width:100%; height:100%">
+              <!-- Screen -->
+              <rect x="40" y="28" width="300" height="190" rx="14" fill="#ffffff" stroke="rgba(11,109,255,.35)"/>
+              <rect x="55" y="50" width="270" height="10" rx="5" fill="rgba(11,109,255,.2)"/>
+              <rect x="55" y="70" width="180" height="10" rx="5" fill="rgba(11,109,255,.2)"/>
+              <rect x="55" y="90" width="120" height="10" rx="5" fill="rgba(11,109,255,.2)"/>
+              <rect x="55" y="118" width="120" height="70" rx="10" fill="rgba(11,109,255,.1)"/>
+              <line x1="190" y1="118" x2="310" y2="188" stroke="#FFD60A" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="310" cy="188" r="7" fill="#FFD60A"/>
+
+              <!-- Presenter -->
+              <circle cx="400" cy="120" r="28" fill="#0B6DFF" opacity=".9"/>
+              <rect x="372" y="150" width="56" height="70" rx="18" fill="#0B6DFF" opacity=".85"/>
+              <rect x="362" y="220" width="76" height="10" rx="5" fill="#0B6DFF" opacity=".5"/>
+              <!-- pointer -->
+              <line x1="396" y1="160" x2="290" y2="128" stroke="#0B6DFF" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Collaboration figures -->
+              <circle cx="110" cy="240" r="14" fill="#0B6DFF"/>
+              <circle cx="140" cy="240" r="14" fill="#FFD60A"/>
+              <rect x="98" y="254" width="66" height="22" rx="11" fill="rgba(11,109,255,.25)"/>
+
+              <!-- Idea lightbulbs -->
+              <g>
+                <circle cx="460" cy="70" r="18" fill="#FFD60A"/>
+                <rect x="455" y="84" width="10" height="16" rx="3" fill="#FFD60A"/>
+                <rect x="452" y="100" width="16" height="6" rx="3" fill="#0B6DFF" opacity=".5"/>
+              </g>
+              <g>
+                <circle cx="360" cy="40" r="10" fill="#FFD60A"/>
+                <rect x="356" y="50" width="8" height="10" rx="2" fill="#FFD60A"/>
+                <rect x="354" y="60" width="12" height="4" rx="2" fill="#0B6DFF" opacity=".4"/>
+              </g>
+
+              <!-- Abstract tech elements -->
+              <rect x="250" y="230" width="70" height="36" rx="8" fill="#ffffff" stroke="rgba(11,109,255,.35)"/>
+              <rect x="260" y="238" width="20" height="20" rx="5" fill="rgba(11,109,255,.15)"/>
+              <rect x="286" y="238" width="24" height="20" rx="5" fill="rgba(11,109,255,.15)"/>
+              <rect x="314" y="238" width="16" height="20" rx="5" fill="rgba(11,109,255,.15)"/>
+
+              <!-- Dotted connectors -->
+              <circle cx="210" cy="36" r="3" fill="#0B6DFF"/>
+              <circle cx="226" cy="36" r="3" fill="#0B6DFF"/>
+              <circle cx="242" cy="36" r="3" fill="#0B6DFF"/>
+            </svg>
+          </div>
+          <p class="caption">Illustrations: presenter, idea bulbs, collaboration & abstract tech accents</p>
+        </section>
+      </div>
+
+      <!-- Details anchor (optional) -->
+      <section id="details" style="margin-top:32px">
+        <hr style="border:none;border-top:1px solid rgba(11,109,255,.15); margin: 0 0 18px">
+        <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between">
+          <div style="max-width:70ch; color:var(--muted); font-size:14px">
+            <strong style="color:var(--ink)">Small print:</strong>
+            Register now! Last Date: <strong>17th August</strong> | NEC ID: <strong>NEC2527351</strong>.
+            By registering, you agree to follow event guidelines. For official info, visit the registrar page.
+          </div>
+          <a class="btn btn-outline" href="http://ecell.in/eureka" target="_blank" rel="noopener">Go to ecell.in/eureka</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Ambient floating shapes -->
+    <div class="scene" aria-hidden="true">
+      <svg width="180" height="180" viewBox="0 0 180 180" style="top:-30px; right:-20px">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#0B6DFF" stop-opacity=".45"/>
+            <stop offset="100%" stop-color="#FFD60A" stop-opacity=".45"/>
+          </linearGradient>
+        </defs>
+        <circle cx="90" cy="90" r="80" fill="url(#g1)"/>
+      </svg>
+      <svg width="140" height="140" viewBox="0 0 140 140" style="bottom:-20px; left:-10px">
+        <rect x="10" y="10" width="120" height="120" rx="28" fill="rgba(11,109,255,.08)" stroke="rgba(11,109,255,.25)"/>
+      </svg>
+    </div>
+  </main>
+</body>
+</html>
